@@ -1,0 +1,74 @@
+html,body{
+margin: 0;
+padding: 0;
+background-color: #6d6c6d;
+font-family: 'Oswald', sans-serif;
+}
+
+/* {
+ scroll-behavior: smooth;   
+} */
+div.container-work{
+    height: 100vh;
+    width: 100%;
+}
+div.navbar-work{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:#181818;
+    color:#6d6c6d;
+    /* width: 100%; */
+}
+div.logo-work{
+    font-size: 30px;
+    font-weight:bold;
+    margin-right: 5%;
+}
+
+/* Menu Hambuger  */
+.menu_hambuger{
+    margin-right: 5%;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.hambuger{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.hambuger > span{
+    height: 2px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    transition: 0.3s ease;
+}
+.hambuger .top{
+    bottom: 10px;
+}
+.hambuger .bottom{
+    top: 12px;
+}
+  
+input[type="checkbox"]:checked ~ .hambuger .top{
+    transform: rotate(-45deg);
+    width: 50px;
+    transform-origin: right;
+    top: -20px;
+}
+input[type="checkbox"]:checked ~ .hambuger .bottom{
+    transform: rotate(45deg);
+    width: 50px;
+    transform-origin: right;
+    top: 15px;
+}
+input[type="checkbox"]:checked ~ .hambuger .middle{
+  transform: translateY(20px);
+  opacity: 0;
+}    
